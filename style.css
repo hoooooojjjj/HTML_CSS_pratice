@@ -1,0 +1,104 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .roulette-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  
+  .roulette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    animation: none;
+  }
+  
+  .roulette-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    background-color: #FF615E;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+  
+  .roulette-section:nth-child(1) {
+    transform: rotate(0deg);
+  }
+
+  
+  .roulette-image {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  #spin-button {
+    background-color: #FF615E;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #spin-button:hover {
+    background-color: #E24E4B;
+  }
+  
+  .loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #FF615E;
+    animation: loading-spinner 1s ease-in-out infinite;
+  }
+  
+  @keyframes loading-spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
